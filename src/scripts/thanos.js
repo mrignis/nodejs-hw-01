@@ -1,6 +1,6 @@
 // src/scripts/thanos.js
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
+import fs from 'fs';
+import { PATH_DB } from '../constants/contacts';
 
 const thanos = () => {
   const contacts = JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
@@ -14,4 +14,4 @@ const thanos = () => {
   fs.writeFileSync(PATH_DB, JSON.stringify(contacts, null, 2));
 };
 
-module.exports = thanos;
+export default thanos;

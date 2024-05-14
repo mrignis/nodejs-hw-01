@@ -1,15 +1,15 @@
 // src/scripts/addOneContact.js
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
-const createFakeContact = require('../utils/createFakeContact');
+import { PATH_DB } from '../constants/contacts.js';
+import { createFakeContact } from '../utils/createFakeContact.js';
+import fs from 'fs';
 
-const addOneContact = () => {
-  const existingContacts = JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
-  const newContact = createFakeContact();
-  
-  existingContacts.push(newContact);
-  
-  fs.writeFileSync(PATH_DB, JSON.stringify(existingContacts, null, 2));
+export const addOneContact = async () => {
+    const contact = createFakeContact();
+    const contacts = JSON.parse(fs.readFileSync(PATH_DB));
+    
+    contacts.push(contact);
+
+    fs.writeFileSync(PATH_DB, JSON.stringify(contacts, null, 2));
 };
 
-module.exports = addOneContact;
+await addOneContact();

@@ -1,8 +1,8 @@
 // src/scripts/generateContacts.js
-const faker = require('@faker-js/faker');
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
-const createFakeContact = require('../utils/createFakeContact');
+import faker from '@faker-js/faker';
+import fs from 'fs';
+import { PATH_DB } from '../constants/contacts';
+import createFakeContact from '../utils/createFakeContact';
 
 const generateContacts = (count) => {
   const existingContacts = JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
@@ -16,4 +16,4 @@ const generateContacts = (count) => {
   fs.writeFileSync(PATH_DB, JSON.stringify(updatedContacts, null, 2));
 };
 
-module.exports = generateContacts;
+export default generateContacts;

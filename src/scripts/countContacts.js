@@ -1,10 +1,10 @@
 // src/scripts/countContacts.js
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
+import { PATH_DB } from '../constants/contacts.js';
+import fs from 'fs';
 
-const countContacts = () => {
-  const contacts = JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
-  return contacts.length;
+export const countContacts = () => {
+    const contacts = JSON.parse(fs.readFileSync(PATH_DB));
+    return contacts.length;
 };
 
-module.exports = countContacts;
+console.log(countContacts());

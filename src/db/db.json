@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "Agnes Rohan",
+    "phone": "653.309.4488",
+    "email": "Kyla52@gmail.com",
+    "job": "Principal Data Associate"
+  },
+  {
+    "name": "Frank Mayert",
+    "phone": "928-725-1481",
+    "email": "Camryn42@yahoo.com",
+    "job": "Investor Functionality Director"
+  }
+]
