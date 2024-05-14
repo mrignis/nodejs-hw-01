@@ -1,9 +1,5 @@
-// src/scripts/getAllContacts.js
-import fs from 'fs';
-import { PATH_DB } from '../constants/contacts';
+import { PATH_DB } from '../constants/contacts.js';
 
-const getAllContacts = () => {
-  return JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
-};
+export const getAllContacts = async () => {};
 
-export default getAllContacts;
+console.log(await getAllContacts());

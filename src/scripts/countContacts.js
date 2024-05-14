@@ -1,10 +1,5 @@
-// src/scripts/countContacts.js
 import { PATH_DB } from '../constants/contacts.js';
-import fs from 'fs';
 
-export const countContacts = () => {
-    const contacts = JSON.parse(fs.readFileSync(PATH_DB));
-    return contacts.length;
-};
+export const countContacts = async () => {};
 
-console.log(countContacts());
+console.log(await countContacts());
