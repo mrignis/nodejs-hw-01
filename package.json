@@ -6,12 +6,19 @@
   "main": "index.js",
   "homepage": "https://mrignis.github.io/nodejs-hw-01/",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "get-all": "node src/scripts/getAllContacts",
     "generate": "node src/scripts/generateContacts.js",
     "add-one": "node src/scripts/addOneContact.js",
     "count": "node src/scripts/countContacts.js",
     "thanos": "node src/scripts/thanos.js",
     "remove-all": "node src/scripts/removeAllContacts.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -20,6 +27,7 @@
     "@eslint/js": "^9.2.0",
     "@faker-js/faker": "^8.4.1",
     "eslint": "^9.2.0",
-    "globals": "^15.1.0"
+    "globals": "^15.1.0",
+    "nodemon": "^3.1.0"
   }
 }
