@@ -1,3 +1,9 @@
 // src/constants/contacts.js
+// src/constants/contacts.js
+import path from 'path';
 
-export const PATH_DB = './src/db/db.json';
+const PATH_DB = path.join( '.', 'src', 'db', 'db.json');
+
+export { PATH_DB };
+
+
